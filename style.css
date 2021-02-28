@@ -1,0 +1,100 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(70, 31, 144);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Akaya Telivigala', cursive;
+}
+#title{
+    display: flex;
+    font-family: 'Akaya Telivigala', cursive;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    width: max-content;
+    color: tomato;
+    height: max-content;
+}
+#container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 3px;
+    /* background-color: rgb(70, 31, 144); */
+    height: max-content;
+    width: max-content;
+    justify-content: center;
+    align-content: center;
+}
+.cell {
+    height: 20vh;
+    width: 20vw;
+    min-height: 5vh;
+    min-width: 5vw;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Akaya Telivigala', cursive;
+    background-color: rgb(255, 183, 89);
+    border: none;
+    color: rgb(221, 31, 180);
+    outline: none;
+}
+.cell:hover{
+    background-color: yellowgreen;
+}
+#result-displayer{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    height: 1vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    animation-name: result;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+@keyframes result {
+    from {
+        background-color: white;
+    }
+    to {height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        background-color:rgb(57, 194, 212);
+    }
+}
+#result-displayer > p{
+    position: absolute;
+    z-index: 3;
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.0);
+    animation-name: resultContent;
+    animation-fill-mode: both;
+    font-family: 'Akaya Telivigala', cursive;
+}
+@keyframes resultContent {
+    0% {
+        
+        color: rgba(0, 0, 0, 0.0);
+    }
+    50%{
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        color: rgb(255, 255, 255);
+    }
+}
