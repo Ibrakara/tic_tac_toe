@@ -62,7 +62,7 @@ const displayController = (function(){
         }else{
             resultDisplayerContent.textContent = `${winnerSign}`
         }
-        resultDisplayer.addEventListener("click", () => setTimeout(gameFlow.resetGame, 500))
+        resultDisplayer.addEventListener("click", () => setTimeout(gameFlow.resetGame, 1000))
     }
     render()
     return{
@@ -76,6 +76,7 @@ const gameFlow = (function(){
     let playerO = Players("o")
     let plsign = "x"
     let board = gameBoard.getBoard()
+    // console.log("this is after assignning")
     let cells = document.querySelectorAll(".cell")
     let init = function(){
         if(plsign == "x"){
@@ -138,7 +139,6 @@ const gameFlow = (function(){
         init,
         getSign,
         boardCheck,
-        resetGame,
-        removeAllListeners
+        resetGame
     }
 })()
