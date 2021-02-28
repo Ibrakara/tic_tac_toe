@@ -1,0 +1,1 @@
+It is a classical Tic-Tac-Toe game, Player X starts and player who places her/his signs into three cells in same line/row/cross wins.
